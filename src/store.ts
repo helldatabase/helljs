@@ -29,7 +29,7 @@ export default class Store {
     });
   }
 
-  static extract(resp_text: string): BaseType[] {
+  public static extract(resp_text: string): BaseType[] {
     const response = JSON.parse(resp_text);
     if (Object.keys(response).length !== 0) {
       throw new DatabaseError(response.errors);
@@ -38,7 +38,7 @@ export default class Store {
     }
   }
 
-  async get(...keys: string[]): Promise<BaseType[]> {
+  public async get(...keys: string[]): Promise<BaseType[]> {
     const get_statement = new GetStatement(...keys);
     return axios
       .post(this.url_store.query_url, {})
