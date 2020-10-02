@@ -1,0 +1,17 @@
+{
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "strict": true,
+    "target": "es6",
+    "outDir": "dist",
+    "sourceMap": true,
+    "declaration": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  },
+  "lib": ["es2017", "es7", "es6", "dom"]
+}
